@@ -8,7 +8,7 @@ import { Coin } from "./routes/Coin";
 function App() {
   const [coins,setCoins]=useState([]);
 
-const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&sparkline=false `
+const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=false `
 useEffect(()=>{
   axios.get(url).then((response)=>{
     setCoins(response.data)
